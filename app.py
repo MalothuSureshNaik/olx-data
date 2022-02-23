@@ -1,4 +1,4 @@
-pip install flask
+
 from flask import Flask , render_template, request
 import requests
 import pickle
@@ -9,7 +9,7 @@ import sklearn
 
 
 app = Flask(__name__)
-model = pickle.load(open(r'C:\Users\MSN\flask_deploy/rent.pkl','rb'))
+model = pickle.load(open(r'rent.pkl','rb'))
 @app.route('/',methods=['GET'])
 def Home(): 
     return render_template('rent.html')
